@@ -1,0 +1,748 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Kavoon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Nanum+Gothic&display=swap");
+@font-face {
+  font-family: "Kelly Slab", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap");
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.icon-clr {
+  background: -webkit-linear-gradient(180deg, #82a1db 0%, #3167ce 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-size {
+  font-size: 42px;
+}
+
+i {
+  width: 22px;
+  height: 42px;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#results-found {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  color: #444AC4;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: -8px 6px 6.8px -1px rgba(87, 142, 207, 0.39);
+}
+.nav-container h1 {
+  font-family: "Kavoon", serif;
+  color: #444AC4;
+  margin: 38px 0 32px 56px;
+  font-size: 32px;
+}
+.nav-container h1::first-letter {
+  font-size: 37px;
+}
+.nav-container ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-right: 36px;
+  margin-top: 33px;
+  margin-bottom: 27px;
+}
+.nav-container ul > li {
+  margin-right: 28px;
+}
+.nav-container ul > li:nth-child(3) {
+  margin: 0;
+}
+.nav-container #userSearch {
+  border-radius: 30px;
+  padding: 15px 17px 16px 23px;
+  border-color: #7976F5;
+}
+.nav-container #userSearch::placeholder {
+  color: rgba(121, 118, 245, 0.38);
+}
+.nav-container #generate-user,
+.nav-container #add-user {
+  width: 197px;
+  height: 56px;
+  box-sizing: border-box;
+  box-shadow: -2px -2px 1px 0px rgba(87, 142, 207, 0.39) inset;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background: rgba(121, 118, 245, 0.38);
+  color: #444AC4;
+  font-size: 20px;
+  font-family: "Kelly Slab", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 596px);
+  column-gap: 72px;
+  margin: 94px 70px;
+}
+
+.user-container {
+  width: 596px;
+  height: 840px;
+  margin-bottom: 94px;
+  border-radius: 50px;
+  background: #F6F6F6;
+  box-shadow: 1px 2px 5.8px 0px #444AC4;
+  transition: transform 2s ease-in-out;
+}
+.user-container .close-icon {
+  font-size: 30px;
+  color: #346bb7d1;
+  float: inline-end;
+  margin: 1rem 2rem 0;
+}
+.user-container .close-icon:hover {
+  width: 2rem;
+  height: 2rem;
+  font-size: 25px;
+  background: #ee1d1d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-container .profile-container {
+  width: 340px;
+  margin: 54px 122px 63px;
+}
+.user-container table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  font-family: "Kelly Slab", sans-serif;
+}
+.user-container table tbody tr {
+  line-height: 45px;
+  padding-bottom: 42px;
+}
+.user-container table tbody tr td {
+  line-height: 45px;
+  font-size: 25px;
+  color: #444AC4;
+  margin-bottom: 40px;
+}
+.user-container i {
+  margin-right: 29px;
+}
+
+@media (min-width: 200px) and (max-width: 390px) {
+  .nav-container {
+    min-width: 300px;
+  }
+  .nav-container h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-container nav ul {
+    display: block;
+    position: absolute;
+    margin: 20px auto;
+    top: 117px;
+    left: 50px;
+    right: 50px;
+  }
+
+  nav ul li input,
+#generate-user,
+#add-user {
+    min-width: 250px;
+  }
+
+  #generate-user, #add-user {
+    margin-top: 20px;
+  }
+
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 340px;
+    height: 600px;
+    margin-left: 16px;
+  }
+  .user-container .profile-container {
+    width: 170px;
+    margin: 50px 90px;
+  }
+  .user-container table tbody tr td {
+    font-size: 15px;
+  }
+}
+@media (min-width: 390px) and (max-width: 405px) {
+  .nav-container {
+    min-width: 300px;
+  }
+  .nav-container h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-container nav ul {
+    display: block;
+    position: absolute;
+    margin: 20px auto;
+    top: 117px;
+    left: 50px;
+    right: 50px;
+  }
+
+  nav ul li input,
+#generate-user,
+#add-user {
+    min-width: 300px;
+    max-width: 500px;
+  }
+
+  #generate-user, #add-user {
+    margin-top: 20px;
+  }
+
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 350px;
+    height: 600px;
+    margin-left: 16px;
+  }
+  .user-container .profile-container {
+    width: 190px;
+    margin: 40px 75px;
+  }
+  .user-container table tbody tr td {
+    font-size: 16px;
+  }
+}
+@media (min-width: 406px) and (max-width: 450px) {
+  .nav-container {
+    min-width: 300px;
+  }
+  .nav-container h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-container nav ul {
+    display: block;
+    position: absolute;
+    margin: 20px auto;
+    top: 117px;
+    left: 50px;
+    right: 50px;
+  }
+
+  nav ul li input,
+#generate-user,
+#add-user {
+    min-width: 350px;
+    max-width: 400px;
+  }
+
+  #generate-user, #add-user {
+    margin-top: 20px;
+  }
+
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 370px;
+    height: 600px;
+    margin-left: 16px;
+  }
+  .user-container .profile-container {
+    width: 190px;
+    margin: 50px 0;
+    margin-left: 90px;
+  }
+  .user-container table tbody tr td {
+    font-size: 18px;
+  }
+}
+@media (min-width: 450px) and (max-width: 500px) {
+  .nav-container {
+    min-width: 300px;
+  }
+  .nav-container h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-container nav ul {
+    display: block;
+    position: absolute;
+    margin: 20px auto;
+    top: 117px;
+    left: 50px;
+    right: 50px;
+  }
+
+  nav ul li input,
+#generate-user,
+#add-user {
+    min-width: 385px;
+    max-width: 400px;
+  }
+
+  #generate-user, #add-user {
+    margin-top: 20px;
+  }
+
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 500px;
+    margin-left: 16px;
+  }
+  .user-container .profile-container {
+    width: 270px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 500px) and (max-width: 540px) {
+  .nav-container {
+    min-width: 300px;
+  }
+  .nav-container h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-container nav ul {
+    display: block;
+    position: absolute;
+    margin: 20px auto;
+    top: 117px;
+    left: 50px;
+    right: 50px;
+  }
+
+  nav ul li input,
+#generate-user,
+#add-user {
+    min-width: 420px;
+  }
+
+  #generate-user, #add-user {
+    margin-top: 20px;
+  }
+
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 500px;
+    margin-left: 16px;
+  }
+  .user-container .profile-container {
+    width: 270px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 540px) and (max-width: 576px) {
+  .nav-container {
+    min-width: 300px;
+  }
+  .nav-container h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-container nav ul {
+    display: block;
+    position: absolute;
+    margin: 20px auto;
+    top: 117px;
+    left: 50px;
+    right: 50px;
+  }
+
+  nav ul li input,
+#generate-user,
+#add-user {
+    min-width: 440px;
+  }
+
+  #generate-user, #add-user {
+    margin-top: 20px;
+  }
+
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 500px;
+    margin-left: 16px;
+  }
+  .user-container .profile-container {
+    width: 270px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .nav-container h1 {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-container nav ul {
+    display: block;
+    position: absolute;
+    margin: 20px auto;
+    top: 117px;
+    left: 20px;
+    right: 20px;
+  }
+  .nav-container nav ul li input {
+    position: absolute;
+    margin: 10px 0;
+    left: 0;
+    right: 0;
+  }
+  .nav-container #generate-user {
+    position: absolute;
+    top: 80px;
+  }
+  .nav-container #add-user {
+    position: absolute;
+    top: 80px;
+    right: 0;
+  }
+}
+@media (min-width: 550px) and (max-width: 576px) {
+  .user-container {
+    width: 530px;
+  }
+}
+@media (min-width: 576px) and (max-width: 600px) {
+  .grid-container {
+    margin: 300px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 500px;
+    height: 770px;
+    margin-left: 36px;
+  }
+  .user-container .profile-container {
+    width: 270px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+  .grid-container {
+    margin: 240px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 550px;
+    height: 800px;
+    margin-left: 36px;
+  }
+  .user-container .profile-container {
+    width: 300px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+  .grid-container {
+    margin: 230px 0;
+    grid-template-columns: repeat(1, 500px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 630px;
+    height: 730px;
+    margin-left: 36px;
+  }
+  .user-container .profile-container {
+    width: 250px;
+    margin: 40px 190px;
+  }
+  .user-container table {
+    margin: 0 110px;
+    table-layout: auto;
+    width: 530px;
+  }
+  .user-container table tbody tr td {
+    font-size: 22px;
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .grid-container {
+    margin: 250px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 0px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 350px;
+    height: 490px;
+    margin-left: 36px;
+  }
+  .user-container .profile-container {
+    width: 140px;
+    margin: 30px 100px;
+  }
+  .user-container table {
+    border-spacing: 0;
+  }
+  .user-container table tbody tr td {
+    font-size: 17px;
+  }
+  .user-container i {
+    font-size: 19px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1000px) {
+  .grid-container {
+    margin: 250px 0;
+    grid-template-columns: repeat(2, 400px);
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 350px;
+    height: 500px;
+    margin-left: 46px;
+  }
+  .user-container .profile-container {
+    width: 150px;
+    margin-left: 95px;
+    margin-right: 75px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .user-container i {
+    font-size: 25px;
+  }
+  .user-container table {
+    border-spacing: 0;
+  }
+  .user-container table tbody tr td {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1050px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 100px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 450px;
+    height: 690px;
+    margin-left: 36px;
+  }
+  .user-container .profile-container {
+    width: 220px;
+    margin-left: 105px;
+    margin-right: 85px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+  .user-container i {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1051px) and (max-width: 1100px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 120px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 450px;
+    height: 710px;
+    margin-left: 66px;
+  }
+  .user-container .profile-container {
+    width: 250px;
+    margin-left: 95px;
+    margin-right: 75px;
+    margin-bottom: 30px;
+  }
+  .user-container table tbody tr td {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1150px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 150px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 440px;
+    height: 730px;
+    margin-left: 66px;
+  }
+  .user-container .profile-container {
+    width: 220px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1151px) and (max-width: 1200px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 160px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 450px;
+    height: 730px;
+    margin-left: 66px;
+  }
+  .user-container .profile-container {
+    width: 220px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1250px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 200px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 500px;
+    height: 750px;
+    margin-left: 66px;
+  }
+  .user-container .profile-container {
+    width: 250px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1251px) and (max-width: 1300px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 240px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 500px;
+    height: 750px;
+    margin-left: 66px;
+  }
+  .user-container .profile-container {
+    width: 250px;
+  }
+  .user-container table tbody tr td {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1350px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 260px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 520px;
+    height: 770px;
+    margin-left: 66px;
+  }
+  .user-container .profile-container {
+    width: 270px;
+  }
+  .user-container table tbody tr td {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1351px) and (max-width: 1400px) {
+  .grid-container {
+    margin: 100px 0;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 260px;
+    row-gap: 100px;
+  }
+
+  .user-container {
+    width: 560px;
+    height: 820px;
+    margin-left: 66px;
+  }
+  .user-container .profile-container {
+    width: 320px;
+  }
+  .user-container table tbody tr td {
+    font-size: 25px;
+  }
+}
